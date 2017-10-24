@@ -1,0 +1,81 @@
+// text
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		box-shadow: inset 0 -1px 0 0;
+	}
+}
+
+h1 {
+	font: {
+		size: inherit;
+		weight: inherit;
+	}
+}
+
+// h2: see cp-main/cp-project
+
+h3 {
+	font-family: $font2;
+	font-size: 3.6rem;
+	margin-bottom: 0;
+	padding: {
+		top: 1em;
+		bottom: 0.25em;
+	}
+	color: $dark-grey;
+}
+
+h5 {
+	margin-bottom: 1em;
+	font: {
+		family: $font2;
+		size: 1.5rem;
+		weight: 700;
+	}
+	text-transform: uppercase;
+}
+
+h6 {
+	margin-right: 15px;
+	font: {
+		size: 1.5rem;
+		weight: 300;
+	}
+	color: $grey;
+}
+
+.subtitle {
+	font: {
+		size: 1.8rem;
+		weight: 300;
+	}
+}
+.subhead {
+	margin-top: 20px;
+	font: {
+		family: $font2;
+		size: 2.5rem;
+		weight: 500;
+	}
+}
+
+.proj-link {
+	padding: 2px 8px;
+}
+.news-copy {
+	line-height: 2.2rem;
+}
+.info-text {
+	line-height: 2.6rem;
+}
+
+.copy-items {
+	margin-left: 3em;
+}
+.copy-item {
+	padding-left: 1em;
+	line-height: 2;
+}

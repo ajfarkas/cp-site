@@ -1,0 +1,46 @@
+.svg-icon,
+.svg-logo,
+.svg-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+.svg-icon {
+	width: 1.2em;
+	height: 1.2em;
+}
+.svg-logo {
+	width: 2em;
+	height: 2em;
+	margin:{
+		top: -0.5em;
+		bottom: -0.5em;
+	}
+}
+
+.svg-text {
+	font-weight: 400;
+}
+
+.svg-download {
+	fill: $text-color;
+}
+
+.svg-email {
+	fill: $text-color-invert;
+}
+
+.svg-rarr {
+	fill: $text-color;
+}
+
+.svg-star {
+	fill: $text-color;
+}
+
+.svg-twitter {
+	fill: $lightest-grey;
+}
+
+footer .svg-icon {
+	fill: $lightest-grey;
+}

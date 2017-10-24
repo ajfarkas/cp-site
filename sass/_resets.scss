@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	&:focus { outline: none; }
+}
+
+html {
+	font-family: $font1;
+	font-size: 62.5%
+}
+
+body {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	font: {
+		size: 1.5rem;
+		weight: 300;
+	}
+	color: $text-color;
+}
+
+main {
+	background-color: $bg;
+}
+
+section {
+	position: relative;
+	padding: {
+		left: 11.5vw;
+		right: 9vw;
+	}
+}
+
+.ghost {
+	position: fixed;
+	top: -100vh;
+	left: -200vw;
+	opacity: 0;
+}

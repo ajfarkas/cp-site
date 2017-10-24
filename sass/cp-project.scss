@@ -1,0 +1,62 @@
+@import "vars";
+@import "mixins";
+@import "resets";
+@import "icons";
+
+@import "cp-text";
+@import "head-foot";
+
+@import "overview";
+
+h2 {
+	font: {
+		size: 3.5rem;
+		weight: 500;
+	}
+	text-transform: uppercase;
+	color: $text-color-invert;
+}
+
+.overview-wrap {
+	background-color: $bg-cp;
+}
+.overview { max-width: 860px; }
+
+div.info-box {
+	display: block;
+	padding: 7em 0 2em;
+}
+
+.page-nav {
+	margin-top: 2em;
+	list-style: none;
+	font: {
+		size: 2.0rem;
+		weight: 300;
+	}
+	line-height: 1.4;
+	color: $lightest-grey;
+	border-bottom: solid 5px;
+}
+
+.info-section-wrap {
+	padding-bottom: 80px;
+}
+
+.info-section {
+	max-width: 860px;
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	& > * { max-width: $text-max; }
+}
+
+@include breakpoint(600) {
+	.nav-to {
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+.project-copy {
+	line-height: 2.2rem;
+}

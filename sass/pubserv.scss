@@ -1,0 +1,302 @@
+@import "vars";
+@import "mixins";
+@import "resets";
+@import "icons";
+
+@import "head-foot";
+
+// text
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: $grey;
+	}
+}
+
+
+h1 {
+	font: {
+		size: inherit;
+		weight: inherit;
+	}
+}
+
+h2 {
+	display: block;
+	font: {
+		size: 3.5rem;
+		weight: 500;
+	}
+	text-transform: uppercase;
+	padding-bottom: 8px;
+}
+
+h3 {
+	display: inline-block;
+	margin: {
+		right: auto;
+		bottom: 1em;
+	}
+	font: {
+		family: $font2;
+		size: 2.5rem;
+		weight: 700;
+	}
+	text-transform: uppercase;
+	box-shadow: 0 2px 0 0 #70debc, inset 0 -5px $accent;
+	padding-bottom: 0;
+}
+h4 {
+	display: inline-block;
+	padding-bottom: 2px;
+	font-family: $font2;
+	font: {
+		size: 1.8rem;
+		weight: 500;
+	}
+}
+
+h5 {
+	margin-bottom: 1em;
+	font-family: $font2;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h6 {
+	margin-right: 15px;
+	font: {
+		size: 1.5rem;
+		weight: 300;
+	}
+	color: $grey;
+}
+.publication p { 
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+}
+p.pub-type {
+	font-weight: 400;
+}
+
+.title-container {
+	display: inline-block;
+	min-width: 555px;
+	width: calc(100% - 200px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+legend {
+	display: inline-block;
+	padding: 5px 9px;
+	border: 1px solid;
+	font-size: 1.2rem;
+	line-height: 1.3;
+	vertical-align: top;
+}
+
+.key:before {
+	content: '';
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.conf-paper-key:before { background-color: $yellow; }
+.workshop-key:before { background-color: $accent; }
+.tech-report-key:before { background-color: $pale-green; }
+.blog-post-key:before { background-color: lightsteelblue; }
+
+.title-container {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.subtitle {
+	font: {
+		size: 2.0rem;
+		weight: 300;
+	}
+	line-height: 1.4;
+}
+
+.pubserv {
+	background-color: $off-white;
+
+	& article {
+		max-width: 1600px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		padding: 60px 6vw;
+		box-sizing: border-box;
+	}
+}
+
+section {
+	margin-top: 40px;
+	padding: 0;
+}
+
+.publication {
+	padding-left: 1.6rem;
+	margin-bottom: 1rem;
+	padding-bottom: 12px;
+}
+
+.titleblock {
+	margin-left: -16px;
+	padding-left: 8px;
+}
+
+.title-box {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.award {
+	display: inline-block;
+	margin: {
+		top: 6px;
+		right: auto;
+	}
+	padding: 0 10px 0 0;
+	background-color: white;
+	font-size: 1.2rem;
+
+	& .svg-star {
+		margin: {
+			left: 0.3em;
+			right: 0.5em;
+		}
+		fill: $yellow;
+	}
+}
+
+.ref-links {
+	float: right;
+}
+
+.link-box > a {
+	&:hover .svg-icon {
+		stroke: $grey;
+		fill: $grey;
+	}
+
+	&:not(:first-of-type) {
+		margin-left: 10px;
+	}
+}
+
+.abstract {
+	margin-top: 6px;
+	font: {
+		family: georgia, sans-serif;
+		size: 1.3rem;
+	}
+	line-height: 1.4;
+	max-width: 900px;
+
+	&:before {
+		content: 'ABSTRACT:';
+		font-family: $font2;
+		margin-right: 0.8em;
+	}
+}
+// CSS hack for show/hide functionality
+[name="show-abstract"] {
+	position: fixed;
+	left: -3000px;
+
+	&:not(:checked) + .abstract{
+		max-width: 75%;
+		white-space: pre;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		&:hover {
+			box-shadow: inset 0 -1px 0 0;
+			cursor: s-resize;
+		}
+	}
+}
+
+.service-items {
+	margin-left: 1em;
+}
+.service-item {
+	line-height: 2.3rem;
+	padding: .7rem 0;
+	max-width: 850px;
+}
+.sub-item {
+	margin-left: 3rem;
+	font-size: 85%;
+	line-height: 1.7rem;
+	padding-bottom: 4px;
+}
+.emphasis { font-weight: 500; }
+.auth-emph { 
+	font-weight: 500;
+    color: $dark-blue;
+    font-style: italic;
+}
+.pub-in { font-style: italic; }
+
+.abstract-label {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: $font2;
+	padding-right: 10px;
+}
+
+.conf-paper { 
+	border-left: 8px solid $yellow; 
+}
+.workshop { border-left: 8px solid $accent; }
+.blog-post { border-left: 8px solid lightsteelblue; }
+.tech-report { border-left: 8px solid $pale-green; }
+
+@include breakpoint(750) {
+
+	.titleblock {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+
+	.title-box {
+		display: flex;
+		flex-direction: row;
+		flex: 1 1 100%;
+		padding-bottom: 2px;
+	}
+
+	.link-box {
+		flex: 1 1 300px;
+		padding-left: 2.5vw;
+		text-align: right;
+
+		& > a:nth-of-type(2n + 3) {
+			margin-left: 0;
+
+			&:before {
+				content: '';
+				display: block;
+			}
+		}
+	}
+}
+
+@include breakpoint(840) {
+	.title-container { margin-bottom: 0; }
+	legend { float: right; }
+}

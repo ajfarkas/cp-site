@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none; }
+  *:focus {
+    outline: none; }
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 62.5%; }
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #2b2b2b; }
+
+main {
+  background-color: #ffffff; }
+
+section {
+  position: relative;
+  padding-left: 11.5vw;
+  padding-right: 9vw; }
+
+.ghost {
+  position: fixed;
+  top: -100vh;
+  left: -200vw;
+  opacity: 0; }
+
+.svg-icon,
+.svg-logo,
+.svg-text {
+  display: inline-block;
+  vertical-align: middle; }
+
+.svg-icon {
+  width: 1.2em;
+  height: 1.2em; }
+
+.svg-logo {
+  width: 2em;
+  height: 2em;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em; }
+
+.svg-text {
+  font-weight: 400; }
+
+.svg-download {
+  fill: #2b2b2b; }
+
+.svg-email {
+  fill: #ffffff; }
+
+.svg-rarr {
+  fill: #2b2b2b; }
+
+.svg-star {
+  fill: #2b2b2b; }
+
+.svg-twitter {
+  fill: #e6e6e6; }
+
+footer .svg-icon {
+  fill: #e6e6e6; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); }
+
+.home {
+  flex: 0 0 auto;
+  font-size: 2.0rem;
+  font-weight: 400;
+  padding-top: 15px; }
+  .home:hover {
+    box-shadow: none;
+    color: #70debc; }
+
+.nav-links {
+  flex: 0 0 auto; }
+
+.pages {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer; }
+  .pages:not(:last-child) {
+    margin-right: 30px; }
+  .pages:not(.is-selected):hover {
+    color: #70debc;
+    box-shadow: inset 0 -5px 0 0; }
+  .pages.is-selected {
+    box-shadow: inset 0 -5px 0 0; }
+
+.drop-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 2px);
+  right: -10px;
+  min-width: 200px;
+  padding: 8px 12px;
+  list-style: none;
+  background-color: #ffffff;
+  color: #2b2b2b;
+  text-align: right;
+  box-shadow: 2px 2px 1px 0 rgba(102, 205, 170, 0.4); }
+  .drop-list:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: -2px;
+    left: 0; }
+
+.drop-item {
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.pages:hover > .drop-list {
+  display: block; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 63px;
+  background-color: #342b2b;
+  color: #ffffff; }
+  footer .link-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 0;
+    color: #e6e6e6;
+    letter-spacing: 0.5px; }
+    footer .link-contact h5 {
+      color: #ffffff;
+      box-shadow: 0 1px 0 0 #ffdc1e, inset 0 -2px #ffdc1e; }
+    footer .link-contact a {
+      margin: 0.35em 0; }
+
+.footer-one {
+  margin-top: 2rem; }
+
+.uni-logo {
+  height: 22px;
+  width: auto; }
+
+@media only screen and (min-width: 600px) {
+  nav {
+    flex-direction: row; }
+
+  .home {
+    padding-top: 0; }
+
+  .pages {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+@media only screen and (min-width: 750px) {
+  footer {
+    flex-direction: row; }
+
+  .footer-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0; }
+
+  .uni-logo {
+    height: 30px; }
+
+  .footer-zero {
+    order: 2; } }
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: #bababa; }
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+h2 {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 8px; }
+
+h3 {
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 1em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 0 0 #70debc, inset 0 -5px #70debc;
+  padding-bottom: 0; }
+
+h4 {
+  display: inline-block;
+  padding-bottom: 2px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+h5 {
+  margin-bottom: 1em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h6 {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #bababa; }
+
+.publication p {
+  font-size: 1.3rem;
+  line-height: 1.8rem; }
+
+p.pub-type {
+  font-weight: 400; }
+
+.title-container {
+  display: inline-block;
+  min-width: 555px;
+  width: calc(100% - 200px);
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+legend {
+  display: inline-block;
+  padding: 5px 9px;
+  border: 1px solid;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  vertical-align: top; }
+
+.key:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+  vertical-align: middle; }
+
+.conf-paper-key:before {
+  background-color: #ffdc1e; }
+
+.workshop-key:before {
+  background-color: #70debc; }
+
+.tech-report-key:before {
+  background-color: #cdecc7; }
+
+.blog-post-key:before {
+  background-color: lightsteelblue; }
+
+.title-container {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+.subtitle {
+  font-size: 2.0rem;
+  font-weight: 300;
+  line-height: 1.4; }
+
+.pubserv {
+  background-color: #f2f1f0; }
+  .pubserv article {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 6vw;
+    box-sizing: border-box; }
+
+section {
+  margin-top: 40px;
+  padding: 0; }
+
+.publication {
+  padding-left: 1.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 12px; }
+
+.titleblock {
+  margin-left: -16px;
+  padding-left: 8px; }
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: left; }
+
+.award {
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: auto;
+  padding: 0 10px 0 0;
+  background-color: white;
+  font-size: 1.2rem; }
+  .award .svg-star {
+    margin-left: 0.3em;
+    margin-right: 0.5em;
+    fill: #ffdc1e; }
+
+.ref-links {
+  float: right; }
+
+.link-box > a:hover .svg-icon {
+  stroke: #bababa;
+  fill: #bababa; }
+.link-box > a:not(:first-of-type) {
+  margin-left: 10px; }
+
+.abstract {
+  margin-top: 6px;
+  font-family: georgia, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  max-width: 900px; }
+  .abstract:before {
+    content: 'ABSTRACT:';
+    font-family: "Titillium Web", sans-serif;
+    margin-right: 0.8em; }
+
+[name="show-abstract"] {
+  position: fixed;
+  left: -3000px; }
+  [name="show-abstract"]:not(:checked) + .abstract {
+    max-width: 75%;
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+    [name="show-abstract"]:not(:checked) + .abstract:hover {
+      box-shadow: inset 0 -1px 0 0;
+      cursor: s-resize; }
+
+.service-items {
+  margin-left: 1em; }
+
+.service-item {
+  line-height: 2.3rem;
+  padding: .7rem 0;
+  max-width: 850px; }
+
+.sub-item {
+  margin-left: 3rem;
+  font-size: 85%;
+  line-height: 1.7rem;
+  padding-bottom: 4px; }
+
+.emphasis {
+  font-weight: 500; }
+
+.auth-emph {
+  font-weight: 500;
+  color: #32374a;
+  font-style: italic; }
+
+.pub-in {
+  font-style: italic; }
+
+.abstract-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  padding-right: 10px; }
+
+.conf-paper {
+  border-left: 8px solid #ffdc1e; }
+
+.workshop {
+  border-left: 8px solid #70debc; }
+
+.blog-post {
+  border-left: 8px solid lightsteelblue; }
+
+.tech-report {
+  border-left: 8px solid #cdecc7; }
+
+@media only screen and (min-width: 750px) {
+  .titleblock {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0; }
+
+  .title-box {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 100%;
+    padding-bottom: 2px; }
+
+  .link-box {
+    flex: 1 1 300px;
+    padding-left: 2.5vw;
+    text-align: right; }
+    .link-box > a:nth-of-type(2n + 3) {
+      margin-left: 0; }
+      .link-box > a:nth-of-type(2n + 3):before {
+        content: '';
+        display: block; } }
+@media only screen and (min-width: 840px) {
+  .title-container {
+    margin-bottom: 0; }
+
+  legend {
+    float: right; } }
+
+/*# sourceMappingURL=pubserv.css.map */
